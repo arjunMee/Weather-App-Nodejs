@@ -5,16 +5,17 @@ const geocode = (address, callback) => {
     address
   )}.json?access_token=pk.eyJ1IjoiYXJqdW5tZWUiLCJhIjoiY2twZ3puMGQ2Mm1lbjJvbnhhNnY2amM1YiJ9.79twLowoTM0vRuiz-N_Jrw&limit=1`
 
-  request({ uri: url, json: true }, (error, response) => {
+  request({ url, json: true }, (error, { body }) => {
     if (error) {
-      callback('unable to connect to location!', undefined)
-    } else if (response.body.features.length === 0) {
+      callback('unable to connect to weathet service', undefined)
+    } else if (body.features.length === 0) {
       callback('unable to connect to location. try another Saerch ?', undefined)
     } else {
+      const current = body.features[0]
       callback(undefined, {
-        latitude: response.body.features[0].center[0],
-        longitude: response.body.features[0].center[1],
-        location: response.body.features[0].text,
+        latitude: current.center[1],
+        longitude: current.center[0],
+        location: current.text,
       })
     }
   })

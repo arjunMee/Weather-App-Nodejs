@@ -1,21 +1,34 @@
+const geocode = require('./getGeoCode')
+const forcast = require('./getForcast')
+
+geocode(process.argv[2], (error, { latitude, longitude, location } = {}) => {
+  if (error) {
+    return console.log(error)
+  }
+
+  forcast(latitude, longitude, (error, forcastData) => {
+    if (error) {
+      return console.log(error)
+    }
+    console.log(location)
+    console.log(forcastData)
+  })
+})
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // https://weatherstack.com/quickstart
 //de9d0f0433247e032a9346012a85ea09
 // https://www.mapbox.com/  //for Gerolocation address -> leg/long -> weather
 //pk.eyJ1IjoiYXJqdW5tZWUiLCJhIjoiY2twZ3puMGQ2Mm1lbjJvbnhhNnY2amM1YiJ9.79twLowoTM0vRuiz-N_Jrw
-
-const request = require('request')
-const geocode = require('./getGeoCode')
-const forcast = require('./getForcast')
-
-geocode('pune', (error, data) => {
-  console.log(error)
-  console.log(data)
-})
-
-forcast(73.84778, -122.4233, (error, data) => {
-  console.log(error)
-  console.log(data)
-})
 
 // const url =  'http://api.weatherstack.com/current?access_key=de9d0f0433247e032a9346012a85ea09&query=37.8267,-122.4233&units=f'
 
