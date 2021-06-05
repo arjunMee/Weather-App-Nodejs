@@ -1,25 +1,19 @@
 const express = require('express')
 const path = require('path')
+
+console.log(__dirname)
+console.log(__filename)
+
 const app = express()
+const public = path.join(__dirname, './web-page/src')
 
-// console.log(__dirname)
-// console.log(path.join(__dirname, './web-page'))
-
-const public = path.join(__dirname, './web-page')
+app.get('', (req, res) => {
+  res.redner('index')
+})
+app.set('view engine', 'hbs')
 
 app.use(express.static(public))
 
-// app.get('/help', (req, res) => {
-//   res.send({ name: 'meena', age: 34 })
-// })
-
-// app.get('/about', (req, res) => {
-//   res.send('about us we like')
-// })
-// app.get('/weather', (req, res) => {
-//   res.send('we are suffring badly')
-// })
-
 app.listen(3000, () => {
-  console.log('i have started the 3000')
+  console.log('hello boi im runnuing')
 })
