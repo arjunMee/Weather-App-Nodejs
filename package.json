@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/arjunMee/Weather-App-Nodejs#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.7",
     "request": "^2.88.2",
     "yargs": "^17.0.1"
   }
