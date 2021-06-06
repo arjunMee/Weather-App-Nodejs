@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/express.js"
+    "start": "node src/express.js",
+    "dev": "nodemon src/express.js -e js,hbs"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.2",
-    "nodeman": "^1.1.2",
-    "nodemon": "^2.0.7",
     "request": "^2.88.2",
     "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
