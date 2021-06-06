@@ -1,7 +1,44 @@
-h1 {
-  background-color: blueviolet;
+body {
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 500px;
+  margin: auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* justify-content: space-between; */
+}
+footer {
+  padding: 16px 0;
+  margin: 16px 0;
+  color: #888;
+  border-top: 1px solid #eee;
+  background-color: rgb(196, 196, 196);
 }
 
-img {
-  border-radius: 50%;
+header {
+  margin: 16px 0 45px 0;
+  color: #eee;
+  background-color: rgb(131, 131, 131);
+}
+
+h1 {
+  font-size: 64;
+  margin-bottom: 16;
+}
+
+header a {
+  color: rgb(255, 255, 255);
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.portrait {
+  width: 250px;
+  border-radius: 4px;
+}
+
+.main-content {
+  flex-grow: 1;
 }
