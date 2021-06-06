@@ -25,22 +25,22 @@ app.use(express.static(public))
 
 app.get('', (req, res) => {
   res.render('index', {
-    title: 'Weather Ap',
-    name: 'arjun',
+    title: 'Weather App',
+    name: 'Arjun meena',
   })
 })
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    title: 'Weath Help',
-    name: 'arjun Help',
+    title: 'Weather App Help',
+    name: 'Arjun Meena',
   })
 })
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'anout me',
-    name: 'meena arjun',
+    title: 'About Me',
+    name: 'Arjun Meena',
   })
 })
 
