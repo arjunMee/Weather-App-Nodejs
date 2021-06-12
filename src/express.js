@@ -89,6 +89,7 @@ app.get('/weather', (req, res) => {
   //   location: 'kota',
   //   address: req.query.address,
   // })
+  //
 })
 
 // nodemon express.js -e js,hbs e flaf for extension
@@ -106,5 +107,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log('hello boi im runnuing' + port)
+  // console.log('hello boi im runnuing' + port)
 })
