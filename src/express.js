@@ -93,7 +93,7 @@ app.get('/weather', (req, res) => {
 })
 
 // nodemon express.js -e js,hbs e flaf for extension
-// created and render a 404 page with handlerbar
+// created and render a 404 page with handlerba
 app.get('/help/*', (req, res) => {
   res.render('404', {
     errorMessage: 'Help article not found 404',
@@ -106,6 +106,4 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(port, () => {
-  // console.log('hello boi im runnuing' + port)
-})
+app.listen(port, () => {})
