@@ -19,4 +19,3 @@ const forcast = (latitude, longitude, callback) => {
 }
 
 module.exports = forcast
-// const current = response.body.current
